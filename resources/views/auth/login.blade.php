@@ -18,7 +18,7 @@
 
                         {!! Form::controlBootstrap('text', 6, 'log', $errors, trans('front/login.log')) !!}
                         {!! Form::controlBootstrap('password', 6, 'password', $errors, trans('front/login.password')) !!}
-                        {!! Form::submitBootstrap(trans('front/form.send'), 'col-lg-12') !!}
+                        {!! Form::submitBootstrap(trans('front/form.login'), 'col-lg-12') !!}
                         {!! Form::checkboxBootstrap('memory', trans('front/login.remind')) !!}
                         {!! Form::text('address', '', ['class' => 'hpet']) !!}		  
                         <div class="col-lg-12">					

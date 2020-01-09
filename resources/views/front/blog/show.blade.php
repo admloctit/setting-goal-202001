@@ -22,7 +22,7 @@
                 <hr>
                 @if($post->tags->count())
                     <div class="text-center">
-                        <small>{{ trans('front/blog.tags') }}</small> 
+                        <small>{{ trans('front/blog.tags') }}</small>
                         @foreach($post->tags as $tag)
                             {!! link_to('blog/tag?tag=' . $tag->id, $tag->tag, ['class' => 'btn btn-default btn-xs']) !!}
                         @endforeach
