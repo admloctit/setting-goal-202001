@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         DB::table('roles')->insert([
 
             ['title' => 'Administrator', 'slug' => 'admin'],
-            ['title' => 'Redactor', 'slug' => 'redac'],
+            ['title' => 'Editor', 'slug' => 'editor'],
             ['title' => 'User', 'slug' => 'user']
 
         ]);
@@ -30,25 +30,25 @@ class DatabaseSeeder extends Seeder
             'valid' => true,
             'confirmed' => true],
 
-            ['username' => 'GreatRedactor',
-            'email' => 'redac@example.com',
-            'password' => bcrypt('redac'),
+            ['username' => 'GreatEditor',
+            'email' => 'editor@example.com',
+            'password' => bcrypt('editor'),
             'seen' => true,
             'role_id' => 2,
             'valid' => true,
             'confirmed' => true],
 
-            ['username' => 'Walker',
-            'email' => 'walker@example.com',
-            'password' => bcrypt('walker'),
+            ['username' => 'Locnp',
+            'email' => 'locnp@example.com',
+            'password' => bcrypt('locnp'),
             'seen' => false,
             'role_id' => 3,
             'valid' => false,
             'confirmed' => true],
 
-            ['username' => 'Slacker',
-            'email' => 'slacker@example.com',
-            'password' => bcrypt('slacker'),
+            ['username' => 'nploc',
+            'email' => 'nploc@example.com',
+            'password' => bcrypt('nploc'),
             'seen' => false,
             'role_id' => 3,
             'valid' => false,
@@ -58,18 +58,18 @@ class DatabaseSeeder extends Seeder
 
         DB::table('contacts')->insert([
 
-            ['name' => 'Dupont',
-            'email' => 'dupont@example.com',
+            ['name' => 'user1',
+            'email' => 'user1@example.com',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
-            ['name' => 'Durand',
-            'email' => 'durand@example.com',
+            ['name' => 'user1',
+            'email' => 'user1@example.com',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
-            ['name' => 'Martin',
-            'email' => 'martin@example.com',
+            ['name' => 'user2',
+            'email' => 'user2@example.com',
             'message' => Lipsum::short()->text(2),
             'seen' => true]
             
@@ -88,21 +88,8 @@ class DatabaseSeeder extends Seeder
 
             ['title' => 'Post 1',
             'slug' => 'post-1',
-            'summary' => '<img alt="" src="/files/user2/mega-champignon.png" style="float:left; height:128px; width:128px" />' . Lipsum::short()->html(2),
-            'content' => Lipsum::medium()->html(2) . '<pre>
-<code class="language-php">protected function getUserByRecaller($recaller)
-{
-    if ($this-&gt;validRecaller($recaller) &amp;&amp; ! $this-&gt;tokenRetrievalAttempted)
-    {
-        $this-&gt;tokenRetrievalAttempted = true;
-
-        list($id, $token) = explode("|", $recaller, 2);
-
-        $this-&gt;viaRemember = ! is_null($user = $this-&gt;provider-&gt;retrieveByToken($id, $token));
-
-        return $user;
-    }
-}</code></pre>' . Lipsum::medium()->html(2),
+            'summary' => Lipsum::short()->html(2). '<img alt="" src="/files/user2/bo-tot(gaur).jpg" style="float:left; height:128px; width:128px" />',
+            'content' => Lipsum::medium()->html(4),
             'active' => true,
             'user_id' => 1],
 
