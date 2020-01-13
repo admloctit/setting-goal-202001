@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title' => 'Laravel 5',
-    'sub-title' => 'An awesome PHP framework',
+    'title' => 'ICD VIETNAM',
+    'sub-title' => 'News Blog example',
     'home' => 'Home',
     'contact' => 'Contact',
     'blog' => 'Blog',

@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'send' => 'Send'
+    'send' => 'Send',
+    'login' => 'Login'
 ];
