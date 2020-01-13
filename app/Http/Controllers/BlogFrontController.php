@@ -56,7 +56,6 @@ class BlogFrontController extends Controller
     public function show(Request $request, $slug)
     {
         $user = $request->user();
-//        dump($user);die();
 
         return view('front.blog.show', array_merge($this->blogRepository->getPostBySlug($slug), compact('user')));
     }

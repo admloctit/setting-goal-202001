@@ -78,6 +78,16 @@
                                 </li>
                             @endif
                         @endif
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img width="32" height="32" alt="{{ session('locale') }}"  src="{!! asset('img/' . session('locale') . '-flag.png') !!}" />&nbsp; <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            @foreach ( config('app.languages') as $user)
+                                @if($user !== config('app.locale'))
+                                    <li><a href="{!! url('language') !!}/{{ $user }}"><img width="32" height="32" alt="{{ $user }}" src="{!! asset('img/' . $user . '-flag.png') !!}"></a></li>
+                                @endif
+                            @endforeach
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -97,7 +107,7 @@
 
     <footer>
         @yield('footer')
-        <p class="text-center"><small>Setting goal &copy; 202001</small></p>
+        <p class="text-center"><small>Copyright &copy; Momo</small></p>
     </footer>
         
     {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js') !!}

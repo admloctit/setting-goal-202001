@@ -5,7 +5,6 @@ namespace App\Repositories;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Comment;
-use Illuminate\Database\Eloquent\Builder;
 
 class BlogRepository extends BaseRepository
 {
@@ -153,12 +152,10 @@ class BlogRepository extends BaseRepository
 
         $comments = $this->comment
             ->wherePostId($post->id)
-            ->join('users', 'users.id', '=', 'comments.user_id')
-            ->where('users.valid', 1)
-//            ->with('users')
-//            ->whereHas('users', function (Builder $q) {
-//                 $q->whereId(2);
-//            })
+            ->with('user')
+            ->whereHas('user', function ($q) {
+                $q->whereValid(true);
+            })
             ->get();
 
         return compact('post', 'comments');

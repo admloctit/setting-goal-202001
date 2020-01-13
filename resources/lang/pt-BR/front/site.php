@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'ICD VIETNAM',
+    'title' => 'Laravel 5',
     'sub-title' => 'Um fantástico framework PHP',
     'home' => 'Home',
     'contact' => 'Contato',

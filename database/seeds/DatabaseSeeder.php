@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
 
             ['username' => 'GreatAdmin',
-            'email' => 'admin@example.com',
+            'email' => 'admin@la.fr',
             'password' => bcrypt('admin'),
             'seen' => true,
             'role_id' => 1,
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'confirmed' => true],
 
             ['username' => 'GreatRedactor',
-            'email' => 'redac@example.com',
+            'email' => 'redac@la.fr',
             'password' => bcrypt('redac'),
             'seen' => true,
             'role_id' => 2,
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'confirmed' => true],
 
             ['username' => 'Walker',
-            'email' => 'walker@example.com',
+            'email' => 'walker@la.fr',
             'password' => bcrypt('walker'),
             'seen' => false,
             'role_id' => 3,
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'confirmed' => true],
 
             ['username' => 'Slacker',
-            'email' => 'slacker@example.com',
+            'email' => 'slacker@la.fr',
             'password' => bcrypt('slacker'),
             'seen' => false,
             'role_id' => 3,
@@ -59,17 +59,17 @@ class DatabaseSeeder extends Seeder
         DB::table('contacts')->insert([
 
             ['name' => 'Dupont',
-            'email' => 'dupont@example.com',
+            'email' => 'dupont@la.fr',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
             ['name' => 'Durand',
-            'email' => 'durand@example.com',
+            'email' => 'durand@la.fr',
             'message' => Lipsum::short()->text(2),
             'seen' => false],
 
             ['name' => 'Martin',
-            'email' => 'martin@example.com',
+            'email' => 'martin@la.fr',
             'message' => Lipsum::short()->text(2),
             'seen' => true]
             
